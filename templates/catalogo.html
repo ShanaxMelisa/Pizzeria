@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+            <!-- Compatibilidad de carácteres internacional -->
+    <meta charset="UTF-8">   
+            <!-- visualización distintos dispositivos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Catálogo de Pizzas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        h1 { /* encabezado */
+            text-align: center;
+            padding: 20px;
+            background-color: #ff6347;
+            color: white;
+            margin: 0;
+        }
+        .catalogo {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+        }
+        .producto {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            padding: 16px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .producto:hover {
+            transform: scale(1.05);
+        }
+        .producto img {
+            max-width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 8px;
+            border-radius: 8px 8px 0 0;
+        }
+        .producto h2 {
+            font-size: 1.5em;
+            margin: 8px 0;
+        }
+        .producto p {
+            font-size: 0.95em;
+            color: #555;
+            margin: 0 0 8px;
+        }
+        .producto .precio {
+            font-size: 1.2em;
+            color: #ff6347;
+            margin-top: 8px;
+        }
+        .producto button {
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 1em;
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .producto button:hover {
+            background-color: #e55337;
+        }
+        .pedido {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .pedido h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .pedido ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .pedido li {
+            font-size: 1.2em;
+            margin: 5px 0;
+        }
+        .ver-pedido-button {
+            width: 50px;
+            height: 50px;
+            font-size: 1em;
+            background-color: #2B3044;
+            color: white;
+            border: none;
+            border-radius: 50%; /* Circular */
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin: 20px 0;
+        }
+        .ver-pedido-button:hover {
+            background-color: #1A1D23;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #2B3044;
+            color: white;
+        }
+        .redirect-button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #2B3044;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+
+        .redirect-button:hover {
+            background-color: #1A1D23;
+        }   
+    </style>
+</head>
+<body>
+    <script>
+        function redirectToPage() {
+            window.location.href = '/hacer_pedido'; /* Redirigir a otra página con botón */
+        }
+    </script>
+    <h1>Catálogo de Pizzas</h1>
+            <!-- div contiene elementos -->
+    <div class="catalogo" id="catalogo">
+        <div class="producto"> 
+            <img src="https://cucinago.ar/image/productos/pro1055.jpg" alt="Pizza Margarita">
+            <h2>Pizza Margarita</h2>
+            <p>Mozzarella, tomate y albahaca fresca.</p><br><br><br><br>
+            <div class="precio">$2750</div><br><br><br>
+        </div>
+        <div class="producto">
+            <img src="https://i0.wp.com/awesomepizza.ca/wp-content/uploads/2015/01/Papperoni.jpg?w=700&ssl=1" alt="Pizza Pepperoni">
+            <h2>Pizza Pepperoni</h2>
+            <p>Mozzarella, salsa de tomate y pepperoni.</p>
+            <br><div class="precio">$2500</div><br>
+        </div>
+        <div class="producto">
+            <img src="https://cucinago.ar/image/productos/pro1062.jpg" alt="Pizza Cuatro Quesos">
+            <h2>Pizza Cuatro Quesos</h2>
+            <p>Mozzarella, gorgonzola, parmesano y ricota.</p><br><br><br><br>
+            <div class="precio">$2200</div><br><br><br><br>
+        </div>
+        <!-- Agrega más pizzas aquí -->
+        <div class="producto">
+            <img src="https://i.pinimg.com/originals/2d/15/00/2d15009cab2b7b82d880d6831cb45523.jpg" alt="Pizza Hawaiana">
+            <h2>Pizza Hawaiana</h2>
+            <p>Mozzarella, salsa de tomate, jamón y piña.</p><br><br><br><br>
+            <div class="precio">$2930</div><br>
+        </div>
+        <div class="producto">
+            <img src="https://cdn7.kiwilimon.com/recetaimagen/38841/640x640/50030.jpg.webp" alt="Pizza de Champiñones">
+            <h2>Pizza de Champiñones</h2>
+            <p>Mozzarella, champiñones, salsa de tomate.</p>
+            <div class="precio">$2780</div><br>
+        </div>
+        <div class="producto">
+            <img src="https://kentucky.com.ar/imgs/productos/7/thumb0000.jpg?v=1717101365" alt="Pizza Fugazzeta">
+            <h2>Pizza Fugazzeta</h2>
+            <p>Mozzarella, jamón, cebolla, salsa blanca.</p><br>
+            <div class="precio">$2800</div><br>
+        </div>
+        <div class="producto">
+            <img src="https://kentucky.com.ar/imgs/productos/6/thumb0000.jpg?v=1717101365" alt="Pizza Infierno">
+            <h2>Pizza Infierno</h2>
+            <p>Mozzarella, panceta feteada, salsa de tomate, salsa de jalapeño rojo, cebolla morada, provolone, albahaca.</p>
+            <div class="precio">$3000</div><br>
+        </div>
+        <div class="producto">
+            <img src="https://kentucky.com.ar/imgs/productos/1/thumb0000.jpg?v=1717101365" alt="Pizza Moderna">
+            <h2>Pizza Moderna</h2>
+            <p>Mozzarella, salsa de tomate, rúcula, jamón, jamon crudo y tomate deshidratado.</p><br>
+            <div class="precio">$3800</div><br>
+        </div>
+        <div class="producto">
+            <img src="https://cucinago.ar/image/productos/pro3037.jpg" alt="Pizza de Anchoa">
+            <h2>Pizza de Anchoa</h2>
+            <p>Rodajas de tomate, mozzarella, anchoas y orégano.</p><br><br><br><br><br>
+            <div class="precio">$4000</div><br>
+        </div>
+    </div>
+    <div class="pedido" id="pedido">
+        <ul id="listaPedido"></ul>
+    </div>
+            <!-- Creamos un botón para al hacer click se rediriga a otra página-->
+    <div class="footer">
+        <button class="redirect-button" onclick="redirectToPage()">Hacer pedido</button>
+        <button onclick="window.location.href='/pedidos'" class="ver-pedido-button">Ver Pedido</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página con Imagen de Fondo</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-image: url('https://i.pinimg.com/originals/92/1b/f3/921bf37244e2081996cdd0d85aab513b.png');
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+        }
+        
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .main-box {
+            background-color: rgba(255, 255, 255, 0);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px rgba(134, 76, 76, 0.1);
+            width: 400px;
+            max-width: 90%;
+        }
+
+        .container-element {
+            margin-bottom: 20px;
+        }
+
+        .container-element label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .container-element input[type="text"],
+        .container-element input[type="password"],
+        .container-element input[type="number"],
+        .container-element input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .rainbow-hover {
+            font-size: 16px;
+            font-weight: 700;
+            color: #fff;
+            background-color: #2B3044;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 12px 24px;
+            position: relative;
+            line-height: 24px;
+            border-radius: 9px;
+            box-shadow: 0px 1px 2px #334db5,
+                        0px 4px 16px #2B3044;
+            transform-style: preserve-3d;
+            transform: scale(var(--s, 1)) perspective(600px)
+                        rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+            perspective: 600px;
+            transition: transform 0.1s;
+        }
+
+        .rainbow-hover:active {
+            transition: 0.3s;
+            transform: scale(0.93);
+        }
+        h1 {
+            text-align: center; /* Centrar el texto dentro del h1 */
+            margin-bottom: 20px; 
+        }
+
+        .register-button {
+            margin-top: 20px; 
+            width: 100%; 
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>Registro</h1>
+            <!-- Los div contienen elementos o clases -->
+    <div class="container">
+        <div class="main-box">
+            <!-- Este es un formulario para registrarse -->
+            <form action="/register" method="post">
+                <div class="container-element">
+                    <label><b>Nombre</b></label>
+                    <input type="text" name="nombre" placeholder="Nombre" />
+                </div>
+                <div class="container-element">
+                    <label><b>Direccion</b></label>
+                    <input type="text" name="direccion" placeholder="Direccion"/>
+                </div>
+                <div class="container-element">
+                    <label><b>Telefono</b></label>
+                    <input type="text" name="telefono" placeholder="Telefono"/>
+                </div>
+            </form>
+            <!-- Este es una función para redirigir la página -->
+            <script>
+                function redirectToPage() {
+                    window.location.href = '/catalogo.html'; // Redirige a la página de pedidos
+                }
+            </script>
+            <!-- Botón para redirigir -->
+            <button onclick="window.location.href='/catalogo'" class="register-button rainbow-hover">Registrar</button>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+

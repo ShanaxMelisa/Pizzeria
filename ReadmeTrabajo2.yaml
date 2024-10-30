@@ -1,0 +1,35 @@
+Readme
+Alumnas: Melisa Marchesi, Damaris Videla
+1- Creamos una carpeta: "Trabajo Práctico 2 Programación"
+2- Creamos el Readme:
+3- Levantar el servidor: ('app.py')
+   a- Importar flask
+   b- Utilizar el metodo run de flask
+   c- Importar SQL y los app.config
+   d- Conectamos la base de datos
+   e- Realizamos las rutas a las distintas vistas
+4- Creamos distintas carpetas: "Static", "Templates", "Server"
+    a- En la carpeta "Server" creamos el archivo .env
+    b- En la carpeta "Static" creamos el archivo style.css
+5- Renderizar vistas:
+     a- Creamos los archvios "catalogo.html", "hacer_pedido.html", "index.html", "inicio.html", "pedidos.html", "registro.html"
+     b-creo la base de datos, la cual esta en phpmyadmin
+     b-levanto el servicio de mysql con xampp
+     c-configuro host,user,password,db.
+6- Diseñamos el /catalogo con imagenes, etc:
+    a- Creamos un boton que redirige a "hacer_pedido" y otro boton que redirige a "pedidos.html"
+7- Diseñamos el /registro:
+    a- Cremos un boton que redirige al catalogo
+8- Diseñamos el /inicio:
+    a- Creamos el formato de inicio
+    b- Agregamos sellos de agua
+    c- Agregamos el nombre de la pizzeria y, dos botones.
+9- Diseñamos el /pedidos:
+    a- Creamos el formato de la pagina.
+    b- Lo conectamos con los datos de la base de datos.
+    c- Se visualiza los pedidos realizados.
+10- Diseñamos el /index:
+    a- Es el prototipo de como queriamos que se viera la vista "hacer_pedido.html"
+11- Diseñamos el /hacer_pedido:
+    a- Creamos input para ingresar datos
+    b- Lo conectamos para insertar a la tabla en la base de datos en el server

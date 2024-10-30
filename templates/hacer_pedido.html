@@ -1,0 +1,63 @@
+{% with mensajes = get_flashed_messages() %}
+{% if mensajes %}
+{% for mensaje in mensajes %}
+    <p>{{mensaje}}</p>
+{% endfor %}
+{% endif %}
+{% endwith %}
+<!--Recupera los mensajes flash de la sesión, los itera y los muestra como párrafos en la página web*/-->
+<style>
+    h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px;
+            font-size: 16px;
+            background-color: #5288c6;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+      body {
+            background-image: url('https://i.pinimg.com/originals/2c/5c/4e/2c5c4e1572c840cbff1baa0bae8f5b9e.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: 'Brookman Old Style', Tahoma, Arial, sans-serif; /* Cambio de la fuente */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+</style>
+
+<!--Formulario donde se ingresan datos y se envian a la base de datos a traves de POST-->
+<form action="/recibir_pedido" method="POST">
+
+    <input type="text" name="nombre" placeholder="Ingrese su nombre">
+    <input type="text" name="direccion" placeholder="Ingrese su dirección">
+    <input type="text" name="telefono" placeholder="Ingrese su telefono">
+    <input type="text" name="producto" placeholder="Ingrese el producto">
+    <input type="text" name="cantidad" placeholder="Ingrese la cantidad">
+    <button type="submit">Agregar</button>
+
+</form>
